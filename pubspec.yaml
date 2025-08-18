@@ -1,7 +1,7 @@
 name: flutter_basic_util
 description: "A new Flutter package project."
 version: 0.0.1
-homepage:
+homepage: https://github.com/elieonline/flutter_basic_util
 
 environment:
   sdk: ^3.8.1

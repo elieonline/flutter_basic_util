@@ -24,7 +24,7 @@ class Validators {
     };
   }
 
-  static Validator notEmpty([bool strict = false]) {
+  static Validator required([bool strict = false]) {
     return (String? value) {
       if ((value?.isEmpty ?? true)) {
         return "Field cannot be empty.";
@@ -134,8 +134,9 @@ class Validators {
       if (value!.isEmpty) {
         return "Field cannot be empty.";
       }
-      if (!value.contains(" ")) {
-        return "Seperate names with spaces";
+      final nameRegExp = RegExp(r'^[A-Za-z]{2,}\s+[A-Za-z]{2,}$');
+      if (!nameRegExp.hasMatch(value.trim())) {
+        return "Enter first and last name, separated by space";
       }
       return null;
     };

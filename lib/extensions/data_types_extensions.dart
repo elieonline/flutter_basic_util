@@ -96,3 +96,13 @@ class Utils {
     return fraction.length < total ? fraction.length : total;
   }
 }
+
+extension ListExtension<T> on List<T> {
+  T? firstWhereOrNull(bool Function(T element) test) {
+    try {
+      return firstWhere(test);
+    } catch (e) {
+      return null;
+    }
+  }
+}

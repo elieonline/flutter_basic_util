@@ -6,6 +6,8 @@ export '../utils/num_format.dart';
 export '../utils/launcher.dart';
 export '../utils/functions.dart';
 export '../utils/spacing.dart';
+export '../utils/media_cache.dart';
+export '../utils/polling_service.dart';
 export '../extensions/string_extension.dart';
 export '../extensions/data_types_extensions.dart';
 export '../extensions/date_extensions.dart';

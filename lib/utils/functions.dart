@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
+import 'package:flutter/material.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 
 Uint8List base64ToImage(String? image) {
@@ -48,4 +49,11 @@ Future<File?> compressImage(File imageFile, {int maxSize = 1}) async {
 
   // Convert to file: Uint8List to File
   return File(imageFile.path).writeAsBytes(compressedBytes);
+}
+
+/// Show toast message
+void showToast(BuildContext context, String message) {
+  ScaffoldMessenger.of(
+    context,
+  ).showSnackBar(SnackBar(content: Text(message), duration: Durations.extralong4));
 }
